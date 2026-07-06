@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Faiz Assifuddin — Portfolio</title>
+<meta name="description" content="Karya-karya utama MaddazXD di persimpangan ekonomi syariah dan teknologi.">
+<!-- Fonts: system-native stack only, no external network requests (see style.css) -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<canvas id="bg-canvas"></canvas>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Ahmad Faiz<span class="nav-brand-sub">MaddazXD</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html" class="is-active">Portfolio</a>
+    <a href="projects.html">Systems</a>
+    <a href="gallery.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="nav-tools">
+    <button type="button" class="icon-btn lang-toggle" aria-label="Switch language"><span class="lang-btn">EN</span></button>
+    <button type="button" class="icon-btn theme-toggle" aria-label="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="1.6"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="1.6" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <button type="button" class="nav-burger icon-btn" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="projects.html">Systems</a>
+  <a href="gallery.html">Journal</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<header class="section wrap" style="padding-top: clamp(120px,14vw,180px); padding-bottom:0;">
+  <span class="t-eyebrow reveal">
+    <span data-lang="id" class="is-active">Karya Terpilih</span><span data-lang="en">Selected Work</span>
+  </span>
+  <h1 class="t-h1 mask" style="margin-top:18px; max-width:820px;">
+    <span data-lang="id" class="is-active"><span>Mahakarya di persimpangan angka, etika, dan kode.</span></span>
+  </h1>
+  <p class="t-lead reveal" style="margin-top:22px; max-width:620px;">
+    <span data-lang="id" class="is-active">Setiap proyek adalah eksperimen mempertemukan disiplin ekonomi syariah dengan presisi teknis.</span>
+    <span data-lang="en">Every project is an experiment bringing Sharia-economics discipline together with technical precision.</span>
+  </p>
+</header>
+
+<section class="section wrap">
+  <div class="bento">
+
+    <article class="bento-item wide tall tilt reveal" data-project="analytics">
+      <div class="tilt-inner">
+        <span class="b-glyph">01</span>
+        <span class="b-tag">
+          <span data-lang="id" class="is-active">Analisis Ekonomi Terkomputerisasi</span><span data-lang="en">Computational Economic Analysis</span>
+        </span>
+        <h3>
+          <span data-lang="id" class="is-active">Sharia Market Analytics Dashboard</span>
+          <span data-lang="en">Sharia Market Analytics Dashboard</span>
+        </h3>
+        <p>
+          <span data-lang="id" class="is-active">Model penyaringan saham syariah otomatis yang membaca rasio utang dan pendapatan non-halal, lalu memvisualisasikan tren pasar secara real-time.</span>
+          <span data-lang="en">An automated Sharia-stock screening model that reads debt ratios and non-halal income, then visualizes market trends in real time.</span>
+        </p>
+      </div>
+      <div class="b-detail" hidden>
+        <span class="b-tag"><span data-lang="id" class="is-active">Analisis Ekonomi Terkomputerisasi</span><span data-lang="en">Computational Economic Analysis</span></span>
+        <h3><span data-lang="id" class="is-active">Sharia Market Analytics Dashboard</span><span data-lang="en">Sharia Market Analytics Dashboard</span></h3>
+        <p><span data-lang="id" class="is-active">Dashboard ini lahir dari pertanyaan sederhana: bagaimana investor bisa memantau kepatuhan syariah suatu saham tanpa harus menghitung manual setiap laporan keuangan? Sistem membaca rasio utang berbasis bunga terhadap total aset, porsi pendapatan non-halal terhadap total pendapatan, serta rasio kas dan piutang — tiga pilar utama penyaringan syariah yang umum dipakai di pasar modal Indonesia.</span><span data-lang="en">This dashboard began with a simple question: how can an investor track a stock's Sharia compliance without manually crunching every financial report? The system reads interest-bearing debt against total assets, non-halal income against total revenue, and cash-and-receivable ratios — the three pillars of Sharia screening commonly used in Indonesia's capital market.</span></p>
+        <p><span data-lang="id" class="is-active">Data diproses menjadi grafik tren yang diperbarui berkala, sehingga pengguna dapat melihat kapan sebuah saham keluar-masuk dari daftar syariah, lengkap dengan catatan alasannya. Antarmuka dirancang minimalis agar angka tetap menjadi fokus utama, bukan dekorasi visual.</span><span data-lang="en">Data is processed into periodically updated trend charts, so users can see exactly when a stock enters or exits the Sharia list, along with the reasoning behind it. The interface stays minimal so the numbers remain the focus, not visual decoration.</span></p>
+        <div class="proj-tags"><span>Data Visualization</span><span>Sharia Screening</span><span>Automation</span></div>
+      </div>
+    </article>
+
+    <article class="bento-item narrow tilt reveal" data-project="webcraft">
+      <div class="tilt-inner">
+        <span class="b-glyph">02</span>
+        <span class="b-tag">Web Craft</span>
+        <h3>MaddazXD Portfolio</h3>
+        <p>
+          <span data-lang="id" class="is-active">Situs ini sendiri — dibangun dari nol tanpa framework, mengutamakan tipografi dan gerak yang bermakna.</span>
+          <span data-lang="en">This very site — built from scratch with no framework, prioritizing typography and meaningful motion.</span>
+        </p>
+      </div>
+      <div class="b-detail" hidden>
+        <span class="b-tag">Web Craft</span>
+        <h3>MaddazXD Portfolio</h3>
+        <p><span data-lang="id" class="is-active">Dibangun murni dengan HTML5, CSS3, dan Vanilla JavaScript — tanpa Tailwind, tanpa Bootstrap. Pilihan ini disengaja: setiap piksel, setiap transisi, dan setiap jeda animasi diatur dengan tangan agar terasa personal, bukan hasil templat generatif.</span><span data-lang="en">Built purely with HTML5, CSS3, and vanilla JavaScript — no Tailwind, no Bootstrap. That choice is deliberate: every pixel, transition, and animation delay is hand-tuned so it feels personal rather than templated.</span></p>
+        <p><span data-lang="id" class="is-active">Fitur meliputi kursor magnetik, transisi antar-halaman, mode gelap/terang, dua bahasa, dan latar kanvas gradien cair yang bergerak lembut — semuanya ditulis untuk tetap ringan dan cepat dimuat.</span><span data-lang="en">Features include a magnetic cursor, page transitions, dark/light mode, bilingual toggle, and a slow-moving fluid gradient canvas background — all written to stay light and fast-loading.</span></p>
+        <div class="proj-tags"><span>Vanilla JS</span><span>CSS Animation</span><span>No Framework</span></div>
+      </div>
+    </article>
+
+    <article class="bento-item narrow tilt reveal" data-project="zakat">
+      <div class="tilt-inner">
+        <span class="b-glyph">03</span>
+        <span class="b-tag">
+          <span data-lang="id" class="is-active">Alat Keuangan</span><span data-lang="en">Finance Tooling</span>
+        </span>
+        <h3>Zakat &amp; Waqf Calculator</h3>
+        <p>
+          <span data-lang="id" class="is-active">Kalkulator zakat maal dan simulasi wakaf produktif berbasis logika nisab terkini.</span>
+          <span data-lang="en">A zakat-maal calculator and productive-waqf simulator built on current nisab logic.</span>
+        </p>
+      </div>
+      <div class="b-detail" hidden>
+        <span class="b-tag"><span data-lang="id" class="is-active">Alat Keuangan</span><span data-lang="en">Finance Tooling</span></span>
+        <h3>Zakat &amp; Waqf Calculator</h3>
+        <p><span data-lang="id" class="is-active">Alat ini menghitung kewajiban zakat maal berdasarkan nisab emas terkini (85 gram) yang diperbarui mengikuti harga pasar, lalu memberi simulasi berapa persen aset yang wajib dikeluarkan. Untuk wakaf, tersedia simulasi proyeksi hasil wakaf produktif — misalnya wakaf tunai yang diinvestasikan pada instrumen syariah — sehingga wakif bisa memperkirakan dampak jangka panjang kontribusinya.</span><span data-lang="en">This tool calculates zakat-maal obligations based on the current gold nisab (85 grams), updated against market price, then simulates the exact percentage of assets due. For waqf, it includes a productive-waqf projection — for instance cash waqf invested in Sharia instruments — so a donor can estimate the long-term impact of their contribution.</span></p>
+        <p><span data-lang="id" class="is-active">Tujuannya bukan menggantikan konsultasi dengan lembaga amil zakat resmi, melainkan memberi gambaran awal yang mudah dipahami sebelum mengambil keputusan.</span><span data-lang="en">The goal isn't to replace consultation with an official zakat institution, but to give an easy-to-understand first estimate before making a decision.</span></p>
+        <div class="proj-tags"><span>Zakat Logic</span><span>Waqf Simulation</span><span>Financial Literacy</span></div>
+      </div>
+    </article>
+
+    <article class="bento-item wide tilt reveal" data-project="ai-research">
+      <div class="tilt-inner">
+        <span class="b-glyph">04</span>
+        <span class="b-tag">
+          <span data-lang="id" class="is-active">Riset &amp; AI</span><span data-lang="en">Research & AI</span>
+        </span>
+        <h3>
+          <span data-lang="id" class="is-active">Islamic Finance Research Assistant</span>
+          <span data-lang="en">Islamic Finance Research Assistant</span>
+        </h3>
+        <p>
+          <span data-lang="id" class="is-active">Integrasi alat AI untuk mempercepat tinjauan literatur fikih muamalah dan referensi akademik ekonomi syariah.</span>
+          <span data-lang="en">AI-tool integration to accelerate fiqh muamalah literature review and Sharia-economics academic referencing.</span>
+        </p>
+      </div>
+      <div class="b-detail" hidden>
+        <span class="b-tag"><span data-lang="id" class="is-active">Riset &amp; AI</span><span data-lang="en">Research & AI</span></span>
+        <h3><span data-lang="id" class="is-active">Islamic Finance Research Assistant</span><span data-lang="en">Islamic Finance Research Assistant</span></h3>
+        <p><span data-lang="id" class="is-active">Sebagai mahasiswa yang harus membaca banyak kitab klasik dan jurnal akademik sekaligus, saya menyusun alur kerja berbasis AI untuk mempercepat proses riset: meringkas argumen utama sebuah tulisan, memetakan pendapat ulama fikih muamalah dalam satu isu, dan memvalidasi kutipan agar sesuai konteks aslinya.</span><span data-lang="en">As a student who has to read many classical texts and academic journals at once, I built an AI-assisted workflow to speed up research: summarizing a paper's core argument, mapping fiqh-muamalah scholarly opinions on a single issue, and validating citations to stay true to their original context.</span></p>
+        <p><span data-lang="id" class="is-active">AI di sini berperan sebagai asisten, bukan pengganti kajian mendalam — hasil akhirnya tetap ditinjau ulang secara manual sebelum dipakai dalam tugas atau tulisan.</span><span data-lang="en">AI here acts as an assistant, not a replacement for deep study — every output is still manually reviewed before being used in coursework or writing.</span></p>
+        <div class="proj-tags"><span>Academic Research</span><span>AI Workflow</span><span>Fiqh Muamalah</span></div>
+      </div>
+    </article>
+
+    <article class="bento-item tilt reveal" data-project="campus">
+      <div class="tilt-inner">
+        <span class="b-glyph">05</span>
+        <span class="b-tag">
+          <span data-lang="id" class="is-active">Digitalisasi Kampus</span><span data-lang="en">Campus Systems</span>
+        </span>
+        <h3>
+          <span data-lang="id" class="is-active">Sistem Arsip Akademik</span><span data-lang="en">Academic Archive System</span>
+        </h3>
+        <p>
+          <span data-lang="id" class="is-active">Konsep digitalisasi arsip organisasi kampus agar lebih mudah diakses dan diaudit.</span>
+          <span data-lang="en">A concept for digitizing campus organization archives to be more accessible and auditable.</span>
+        </p>
+      </div>
+      <div class="b-detail" hidden>
+        <span class="b-tag"><span data-lang="id" class="is-active">Digitalisasi Kampus</span><span data-lang="en">Campus Systems</span></span>
+        <h3><span data-lang="id" class="is-active">Sistem Arsip Akademik</span><span data-lang="en">Academic Archive System</span></h3>
+        <p><span data-lang="id" class="is-active">Berawal dari arsip organisasi kampus yang masih tersebar di banyak folder dan grup chat, konsep ini merapikan semuanya ke dalam satu struktur folder digital yang konsisten — bernama jelas, berjenjang, dan mudah ditelusuri kembali oleh pengurus berikutnya tanpa harus bertanya ke pengurus sebelumnya.</span><span data-lang="en">This started from campus organization archives scattered across many folders and chat groups. The concept organizes everything into one consistent digital folder structure — clearly named, tiered, and easy for the next batch of organizers to trace without needing to ask the previous ones.</span></p>
+        <div class="proj-tags"><span>Information Architecture</span><span>Documentation</span></div>
+      </div>
+    </article>
+
+    <article class="bento-item tilt reveal" data-project="content">
+      <div class="tilt-inner">
+        <span class="b-glyph">06</span>
+        <span class="b-tag">
+          <span data-lang="id" class="is-active">Konten</span><span data-lang="en">Content</span>
+        </span>
+        <h3>
+          <span data-lang="id" class="is-active">Edukasi Ekonomi Syariah</span><span data-lang="en">Sharia Economics Education</span>
+        </h3>
+        <p>
+          <span data-lang="id" class="is-active">Seri video pendek yang menerjemahkan konsep ekonomi syariah ke bahasa yang mudah dipahami generasi muda.</span>
+          <span data-lang="en">A short-video series translating Sharia-economics concepts into language young audiences understand.</span>
+        </p>
+      </div>
+      <div class="b-detail" hidden>
+        <span class="b-tag"><span data-lang="id" class="is-active">Konten</span><span data-lang="en">Content</span></span>
+        <h3><span data-lang="id" class="is-active">Edukasi Ekonomi Syariah</span><span data-lang="en">Sharia Economics Education</span></h3>
+        <p><span data-lang="id" class="is-active">Serangkaian video singkat yang menjelaskan istilah-istilah ekonomi syariah — seperti mudharabah, murabahah, dan gharar — dengan analogi sehari-hari yang mudah dicerna, ditujukan untuk teman sebaya dan adik tingkat yang baru mengenal bidang ini.</span><span data-lang="en">A series of short videos explaining Sharia-economics terms — like mudharabah, murabahah, and gharar — through everyday analogies that are easy to grasp, aimed at peers and juniors new to the field.</span></p>
+        <p><span data-lang="id" class="is-active">Saya menangani seluruh proses: riset istilah, penulisan naskah, pengambilan gambar sederhana, hingga penyuntingan akhir.</span><span data-lang="en">I handle the entire process: term research, scriptwriting, simple filming, and final editing.</span></p>
+        <div class="proj-tags"><span>Scriptwriting</span><span>Video Editing</span><span>Education</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="project-modal">
+  <div class="project-modal-card">
+    <button type="button" class="project-modal-close" aria-label="Close">✕</button>
+    <div class="project-modal-body"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-row">
+    <span class="nav-brand">Ahmad Faiz Assifuddin<span class="nav-brand-sub">MaddazXD</span></span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Systems</a>
+      <a href="gallery.html">Journal</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-fine"><span>© 2026 MaddazXD — Ahmad Faiz Assifuddin</span></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
