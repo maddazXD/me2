@@ -1,7 +1,7 @@
 /* ==========================================================================
    AHMAD FAIZ ASSIFUDDIN (MADDAZXD) — PORTFOLIO
-   Quiet executive palette. System serif (display) + system sans (body/UI) —
-   no external font requests, so a bad connection can never stall the page.
+   Quiet executive palette. Playfair Display (display) + Inter (body/UI),
+   loaded async from Google Fonts so a slow connection can't block render.
    ========================================================================== */
 
 /* No external fonts are loaded at all — system font stacks only (see
@@ -26,13 +26,11 @@
   --navy-rgb: 62,64,70;
 
   /* ---- type ------------------------------------------------------------ */
-  /* Deliberately no external font request (no @import / Google Fonts):
-     a hung network shouldn't ever be able to stall page navigation.
-     These system stacks still land on a refined serif/sans pairing on
-     virtually every device (iOS/macOS: Georgia + SF; Android: Noto Serif +
-     Roboto; Windows: Georgia + Segoe UI). */
-  --f-display: Georgia, 'Noto Serif', 'Times New Roman', serif;
-  --f-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Loaded async from Google Fonts (non-blocking preload — see <head> of
+     each page), so a slow/broken connection never stalls page rendering
+     or navigation. Falls back to local system fonts until they arrive. */
+  --f-display: 'Playfair Display', Georgia, 'Noto Serif', serif;
+  --f-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* ---- rhythm ------------------------------------------------------------ */
   --edge: clamp(24px, 6vw, 96px);
@@ -104,7 +102,7 @@ svg{ display:block; }
 /* ---- layout ---------------------------------------------------------------- */
 .wrap{ max-width: 1360px; margin: 0 auto; padding-left: var(--edge); padding-right: var(--edge); }
 .section{ position: relative; padding-top: clamp(72px, 10vw, 160px); padding-bottom: clamp(72px, 10vw, 160px); }
-.section-tight{ padding-top: clamp(40px,6vw,80px); padding-bottom: clamp(40px,6vw,80px); }
+.section-tight{ position: relative; z-index: 1; background: var(--bg); padding-top: clamp(40px,6vw,80px); padding-bottom: clamp(40px,6vw,80px); }
 .divider{ height:1px; width:100%; background: var(--line); border:none; margin: 0; }
 .grain{ position:fixed; inset:0; pointer-events:none; z-index: 2; opacity:.035; mix-blend-mode: multiply; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 html.dark .grain{ opacity:.05; mix-blend-mode: overlay; }
@@ -112,7 +110,7 @@ html.dark .grain{ opacity:.05; mix-blend-mode: overlay; }
 /* ==========================================================================
    BACKGROUND CANVAS (slow fluid gradient)
    ========================================================================== */
-#bg-canvas{ position: fixed; inset:0; width:100%; height:100%; z-index:0; opacity:.55; }
+#bg-canvas{ position: fixed; inset:0; width:100%; height:100%; z-index:0; opacity:.55; pointer-events:none; }
 html.dark #bg-canvas{ opacity:.75; }
 
 /* ==========================================================================
@@ -319,7 +317,7 @@ html.dark #bg-canvas{ opacity:.75; }
 /* ==========================================================================
    MARQUEE
    ========================================================================== */
-.marquee{ overflow:hidden; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding: 22px 0; }
+.marquee{ position: relative; z-index: 1; background: var(--bg); overflow:hidden; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding: 22px 0; }
 .marquee-track{ display:flex; gap: 3rem; white-space:nowrap; width:max-content; animation: marquee 34s linear infinite; }
 .marquee:hover .marquee-track{ animation-play-state: paused; }
 .marquee-track span{ font-family: var(--f-display); font-style:italic; font-size: clamp(1.2rem,3vw,2.1rem); color: var(--ink-soft); display:flex; align-items:center; gap: 3rem; }
@@ -376,7 +374,7 @@ html.dark #bg-canvas{ opacity:.75; }
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-.site-footer{ padding: 60px var(--edge) 40px; border-top:1px solid var(--line); }
+.site-footer{ position: relative; z-index: 1; background: var(--bg); padding: 60px var(--edge) 40px; border-top:1px solid var(--line); }
 .footer-row{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px; }
 .footer-links{ display:flex; gap: 28px; flex-wrap:wrap; }
 .footer-links a{ font-size:.85rem; color: var(--ink-soft); }
@@ -513,6 +511,14 @@ html.dark #bg-canvas{ opacity:.75; }
 .contact-right{ display:flex; align-items:center; padding: clamp(90px,8vw,120px) var(--edge) 60px; }
 .contact-right form{ width:100%; max-width: 520px; }
 .time-widget{ display:flex; align-items:baseline; gap:14px; }
+.social-links{ display:flex; gap:12px; margin-top:32px; }
+.social-links a{
+  width:40px; height:40px; border-radius:50%; border:1px solid rgba(242,239,231,.22);
+  display:flex; align-items:center; justify-content:center;
+  transition: border-color .3s, transform .3s var(--ease), background .3s var(--ease);
+}
+.social-links a:hover{ border-color: var(--gold-soft); background: rgba(242,239,231,.06); transform: translateY(-3px); }
+.social-links svg{ width:16px; height:16px; stroke:#F2EFE7; fill:none; }
 .time-widget .clock{ font-family: var(--f-display); font-size: clamp(2rem,4vw,3rem); color: var(--gold-soft); }
 .time-widget .tz{ font-size:.78rem; letter-spacing:.08em; color:#9B988E; text-transform:uppercase; }
 @media (max-width: 900px){ .contact-split{ grid-template-columns: 1fr; } }
